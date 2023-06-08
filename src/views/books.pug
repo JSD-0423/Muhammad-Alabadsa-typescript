@@ -1,0 +1,13 @@
+html
+  head 
+    style
+      include ./public/css/style.css
+    title All Books
+  body
+    div.container
+      if books.length === 0
+        h6.error thers is no books
+      else 
+        ul.list 
+          each book in books
+            li.list_item #{book.title}

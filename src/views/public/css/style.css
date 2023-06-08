@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.error {
+  border: 1px solid red;
+  background-color: #a5252525;
+  padding: 1rem;
+  color: red
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+.list_item {
+  color: #353535;
+  font-weight: 500;
+  padding-block: 0.5rem;
+}
+
+.title {
+  color: orangered;
+  text-transform: capitalize;
+}
+
+.id {
+  color: 252525;
+}

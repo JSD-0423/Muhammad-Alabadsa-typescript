@@ -1,0 +1,16 @@
+html
+  head
+    style
+      include ./public/css/style.css
+    if book
+      title #{book.title}
+    else
+      title book
+
+  body
+    div
+      if !book
+        p Book with #{book.id} not found
+      else
+        h1.title book_title: #{book.title}
+        h2.id id: #{book.id}
