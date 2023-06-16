@@ -5,6 +5,7 @@ import httpStatus from "http-status";
 
 import { ApiError } from "./utils/apiError.js";
 import bookRoutes from "./routers/index.js";
+import { DB } from "./databases/index.js";
 
 interface IResData {
   code: number;
@@ -23,6 +24,8 @@ app.set("view engine", "pug");
 app.set("views", path.resolve("./src/views"));
 // v1 api routes
 app.use("/api/v1", bookRoutes);
+
+DB.sequelize.sync();
 
 // send back a 404 error for any unknown api request
 app.use((_req: Request, _res: Response<IResData>, next: NextFunction) => {
